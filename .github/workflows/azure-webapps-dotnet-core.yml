@@ -39,8 +39,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install OpenSSL (libssl)
-        run: sudo apt-get update && sudo apt-get install -y libssl-dev
+      - name: Install OpenSSL (libssl1.1)
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y wget
+          wget http://archive.ubuntu.com/ubuntu/pool/main/o/openssl1.1/libssl1.1_1.1.1f-1ubuntu2.16_amd64.deb
+          sudo dpkg -i libssl1.1_1.1.1f-1ubuntu2.16_amd64.deb
+
 
       - name: Set up .NET Core
         uses: actions/setup-dotnet@v4
