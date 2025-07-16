@@ -1,0 +1,29 @@
+# ASP.NET Core / .NET 関連
+bin/
+obj/
+.vscode/
+*.user
+*.suo
+
+# ビルド成果物
+*.dll
+*.exe
+*.pdb
+*.db
+
+# 発行関連
+publish/
+*.zip
+
+# ユーザー設定
+*.log
+*.vspscc
+*.vssscc
+
+# Mac/Linux 系
+.DS_Store
+*.swp
+*~
+
+# Git 管理外にしたい作業フォルダ（必要に応じて）
+# data/   ← 今回はコメントアウト
