@@ -1,0 +1,6 @@
+@ImageSurveyWeb_HostAddress = http://localhost:5037
+
+GET {{ImageSurveyWeb_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
