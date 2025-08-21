@@ -26,11 +26,12 @@ jobs:
 
       # ★ ここが csproj の相対パス
       - name: Publish
-        run: dotnet publish ./ImageSurveyWeb/ImageSurveyWeb.csproj -c Release -o ./publish
+        run: dotnet publish ./ImageSurveyWeb.csproj -c Release -o ./publish
       - name: Deploy to Azure WebApp
         uses: azure/webapps-deploy@v3
         with:
           app-name: mt20PhotoApp
           publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
           package: ./publish
+
 
