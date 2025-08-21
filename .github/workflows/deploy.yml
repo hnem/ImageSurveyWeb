@@ -24,7 +24,7 @@ jobs:
       - name: Build (Release)
         run: dotnet build --configuration Release --no-restore
 
-      # プロジェクトの csproj へのパスは必要に応じて修正してください
+      # ★ ここが csproj の相対パス
       - name: Publish
         run: dotnet publish ./ImageSurveyWeb/ImageSurveyWeb.csproj -c Release -o ./publish
 
